@@ -1,0 +1,2452 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batham MP Online & Stationery | Digital & Government Service Center</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="All Online Government & Digital Services at One Place. Aadhaar, PAN Card, Online Form Filling, Printing & Stationery Solutions in Gwalior, MP.">
+    <meta name="keywords" content="MP Online, Stationery, Online Form Filling, Aadhaar Card, PAN Card, Gwalior MP Online, Digital Services, Ravi Batham">
+    <meta name="author" content="Ravi Batham">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Tags (WhatsApp/Facebook Preview) -->
+    <meta property="og:title" content="Batham MP Online & Stationery - Gwalior">
+    <meta property="og:description" content="All Online Government & Digital Services at One Place. Aadhaar, PAN Card, Online Form Filling, Printing & Stationery Solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bathammponline.in">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0052cc/ffffff?text=Batham+MP+Online">
+    <meta property="og:locale" content="hi_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Batham MP Online & Stationery">
+    <meta name="twitter:description" content="All Digital & Government Services Under One Roof - Gwalior, MP">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230052cc'/><text y='.9em' font-size='70' x='15'>💻</text></svg>">
+
+    <!-- Structured Data (Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Batham MP Online & Stationery",
+        "description": "All Online Government & Digital Services at One Place",
+        "url": "https://bathammponline.in",
+        "telephone": "+91-9039640694",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Gwalior",
+            "addressLocality": "Gwalior",
+            "addressRegion": "Madhya Pradesh",
+            "postalCode": "474001",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 26.2183,
+            "longitude": 78.1828
+        },
+        "openingHours": "Mo-Sa 09:00-20:00",
+        "priceRange": "₹",
+        "founder": {
+            "@type": "Person",
+            "name": "Ravi Batham"
+        }
+    }
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================
+           CSS VARIABLES & DESIGN SYSTEM
+        ========================================== */
+        :root {
+            --primary: #0052cc;
+            --primary-hover: #003d99;
+            --secondary: #00b8d9;
+            --accent: #ffab00;
+            --success: #36b37e;
+            --bg-body: #f4f7fe;
+            --bg-card: rgba(255, 255, 255, 0.85);
+            --bg-glass: rgba(255, 255, 255, 0.7);
+            --text-main: #172b4d;
+            --text-muted: #6b778c;
+            --border-color: rgba(225, 230, 240, 0.8);
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 12px 32px rgba(0, 82, 204, 0.12);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0a192f;
+            --bg-card: rgba(16, 30, 54, 0.85);
+            --bg-glass: rgba(16, 30, 54, 0.75);
+            --text-main: #f4f7fe;
+            --text-muted: #a5b4fc;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            transition: var(--transition);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ==========================================
+           LOADER
+        ========================================== */
+        .loader-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: var(--primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loader-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-logo {
+            font-size: 3rem;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 20px;
+            animation: pulse 1s infinite;
+        }
+
+        .loader-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .loader-bar-fill {
+            height: 100%;
+            background: white;
+            border-radius: 10px;
+            animation: loadFill 1.5s ease forwards;
+        }
+
+        @keyframes loadFill {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* ==========================================
+           GLASSMORPHISM & UTILITIES
+        ========================================== */
+        .glass {
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 82, 204, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 82, 204, 0.4);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: #1eb954;
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==========================================
+           ANNOUNCEMENT BAR
+        ========================================== */
+        .announcement-bar {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 8px 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .announcement-bar a {
+            color: white;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .close-announcement {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* ==========================================
+           HEADER & NAVIGATION
+        ========================================== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            background: var(--bg-glass);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+            padding-bottom: 3px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-main);
+        }
+
+        /* ==========================================
+           HERO SECTION
+        ========================================== */
+        .hero {
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,184,217,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,82,204,0.1);
+            border: 1px solid rgba(0,82,204,0.2);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .num {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-item .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .hero-banner {
+            position: relative;
+        }
+
+        .hero-banner-card {
+            background: linear-gradient(135deg, rgba(0,82,204,0.08), rgba(0,184,217,0.08));
+            border-radius: 24px;
+            padding: 35px 25px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner-card::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(0,82,204,0.15), transparent);
+            border-radius: 50%;
+        }
+
+        .hero-visual {
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .banner-icons-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .banner-item {
+            padding: 15px 10px;
+            border-radius: 12px;
+            background: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .banner-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .banner-item i {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .banner-item span {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================
+           TICKER / SCROLLING TEXT
+        ========================================== */
+        .ticker-section {
+            background: var(--primary);
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        .ticker-wrap {
+            display: flex;
+            gap: 60px;
+            animation: ticker 20s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-wrap span {
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .ticker-wrap span i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        @keyframes ticker {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* ==========================================
+           SEARCH & FILTER SECTION
+        ========================================== */
+        .filter-section {
+            padding: 60px 0 20px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto 25px;
+            background: var(--bg-card);
+            padding: 6px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 10px 20px;
+            outline: none;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-main);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 0.88rem;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================
+           SERVICES SECTION
+        ========================================== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+            padding: 10px 0;
+        }
+
+        .service-card {
+            padding: 25px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transition: var(--transition);
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(0,82,204,0.3);
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(0,82,204,0.1), rgba(0,184,217,0.1));
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .service-card .apply-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.88rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .service-card .apply-link:hover {
+            gap: 10px;
+        }
+
+        /* ==========================================
+           WHY CHOOSE US
+        ========================================== */
+        .why-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(0,82,204,0.04), rgba(0,184,217,0.04));
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .feature-icon-wrap {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .feature-icon-wrap i {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .feature-card h4 {
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .feature-card p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================
+           FORM & PRICE LIST SECTION
+        ========================================== */
+        .apply-section {
+            padding: 60px 0;
+        }
+
+        .grid-2-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .form-container, .price-container {
+            padding: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 0.88rem;
+            color: var(--text-main);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1.5px solid var(--border-color);
+            background: var(--bg-body);
+            color: var(--text-main);
+            outline: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0,82,204,0.1);
+        }
+
+        .form-control.error {
+            border-color: #ff5630;
+        }
+
+        .error-msg {
+            color: #ff5630;
+            font-size: 0.78rem;
+            margin-top: 4px;
+            display: none;
+        }
+
+        /* WhatsApp Form Submit -->
+        .whatsapp-submit {
+            background: #25d366;
+            color: white;
+            width: 100%;
+            justify-content: center;
+            border: none;
+            padding: 14px;
+            font-size: 1rem;
+        }
+
+        .whatsapp-submit:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        /* Price Table */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .price-table th, .price-table td {
+            padding: 14px 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.88rem;
+        }
+
+        .price-table th {
+            color: var(--primary);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-table tr:hover td {
+            background: rgba(0,82,204,0.04);
+        }
+
+        .price-badge {
+            background: rgba(0,82,204,0.1);
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* ==========================================
+           REVIEWS
+        ========================================== */
+        .reviews-section {
+            padding: 60px 0;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .review-card {
+            padding: 25px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .review-card .quote-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            opacity: 0.15;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .reviewer-type {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================
+           GALLERY
+        ========================================== */
+        .gallery-section {
+            padding: 60px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 180px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(0,82,204,0.12), rgba(0,184,217,0.12));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--primary);
+            font-weight: 600;
+            gap: 12px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover::before {
+            opacity: 0.15;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .gallery-item i {
+            font-size: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-item span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ==========================================
+           FAQ
+        ========================================== */
+        .faq-section {
+            padding: 60px 0;
+        }
+
+        .faq-item {
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 22px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-icon {
+            transition: var(--transition);
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 22px;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 22px 18px;
+        }
+
+        /* ==========================================
+           CONTACT
+        ========================================== */
+        .contact-section {
+            padding: 60px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .contact-card {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            padding: 20px 22px;
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateX(5px);
+            border-color: var(--primary);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-card strong {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-card p {
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .contact-card a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: var(--primary);
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            border-radius: var(--radius);
+            border: none;
+        }
+
+        .business-hours {
+            padding: 20px 22px;
+            margin-top: 5px;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.88rem;
+        }
+
+        .hours-row:last-child {
+            border-bottom: none;
+        }
+
+        .open-badge {
+            background: rgba(54,179,126,0.1);
+            color: #36b37e;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .closed-badge {
+            background: rgba(255,86,48,0.1);
+            color: #ff5630;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* ==========================================
+           FOOTER
+        ========================================== */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 18px;
+            color: var(--primary);
+            font-size: 1rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: var(--transition);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            gap: 12px;
+        }
+
+        .footer-links a i {
+            font-size: 0.7rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--bg-body);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* ==========================================
+           FLOATING BUTTONS
+        ========================================== */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: #25d366;
+            animation: ripple 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 0.7; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+        }
+
+        /* ==========================================
+           TOAST NOTIFICATION
+        ========================================== */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--primary);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 99999;
+            transition: transform 0.4s ease;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast.success {
+            background: #36b37e;
+        }
+
+        /* ==========================================
+           RESPONSIVE DESIGN
+        ========================================== */
+        @media (max-width: 992px) {
+            .hero-grid,
+            .contact-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-2-col {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--bg-card);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 40px;
+                gap: 20px;
+                transition: var(--transition);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .section-title h2 {
+                font-size: 1.7rem;
+            }
+
+            .hero-stats {
+                gap: 15px;
+            }
+
+            .stat-item .num {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+            }
+
+            .btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div class="loader-overlay" id="loaderOverlay">
+        <div class="loader-logo">💻 Batham MP Online</div>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        <p style="color: rgba(255,255,255,0.7); margin-top: 15px; font-size: 0.85rem;">Loading Services...</p>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        🎉 New Service: <strong>Ayushman Card</strong> & <strong>Labour Card</strong> now available! &nbsp;
+        <a href="#services">View All Services →</a>
+        <button class="close-announcement" onclick="document.getElementById('announcementBar').style.display='none'">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <div>
+                    <div>Batham MP Online</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 400;">& Stationery Center</div>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#apply" onclick="toggleMenu()">Apply Online</a></li>
+                <li><a href="#prices" onclick="toggleMenu()">Prices</a></li>
+                <li><a href="#reviews" onclick="toggleMenu()">Reviews</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ticker -->
+    <div class="ticker-section">
+        <div class="ticker-wrap">
+            <span><i class="fa-solid fa-circle-check"></i> Aadhaar Card Services Available</span>
+            <span><i class="fa-solid fa-circle-check"></i> PAN Card New & Correction</span>
+            <span><i class="fa-solid fa-circle-check"></i> All Government Certificates</span>
+            <span><i class="fa-solid fa-circle-check"></i> Color & B/W Printing</span>
+            <span><i class="fa-solid fa-circle-check"></i> Railway Ticket Booking</span>
+            <span><i class="fa-solid fa-circle-check"></i> Electricity Bill Payment</span>
+            <span><i class="fa-solid fa-circle-check"></i> Scholarship Form Filling</span>
+            <span><i class="fa-solid fa-circle-check"></i> Aadhaar Card Services Available</span>
+            <span><i class="fa-solid fa-circle-check"></i> PAN Card New & Correction</span>
+            <span><i class="fa-solid fa-circle-check"></i> All Government Certificates</span>
+            <span><i class="fa-solid fa-circle-check"></i> Color & B/W Printing</span>
+            <span><i class="fa-solid fa-circle-check"></i> Railway Ticket Booking</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-location-dot"></i> Official Service Hub — Gwalior, MP
+                </div>
+                <h1>Your Trusted Digital Service Center</h1>
+                <p>All Online Government Services, Documentation, Printing, and Complete Stationery Solutions under one roof — Fast, Reliable & Affordable.</p>
+                <div class="hero-btns">
+                    <a href="#apply" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Apply Online Now
+                    </a>
+                    <a href="https://wa.me/919039640694?text=Hello%20Ravi%20Batham,%20I%20need%20help%20with%20a%20service." target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="num" id="counter1">0</div>
+                        <div class="label">Customers Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="num" id="counter2">0</div>
+                        <div class="label">Services Available</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="num" id="counter3">0</div>
+                        <div class="label">Years of Trust</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-banner fade-in" style="transition-delay: 0.2s;">
+                <div class="hero-banner-card">
+                    <div class="hero-visual">🖥️</div>
+                    <h3 style="text-align:center; margin-bottom: 5px;">Digital Documentation Hub</h3>
+                    <p style="text-align:center; font-size: 0.85rem; color: var(--text-muted);">Government Forms • Printing • Submissions</p>
+                    <div class="banner-icons-grid">
+                        <div class="banner-item">
+                            <i class="fa-solid fa-address-card"></i>
+                            <span>Aadhaar / PAN</span>
+                        </div>
+                        <div class="banner-item">
+                            <i class="fa-solid fa-passport"></i>
+                            <span>Passport</span>
+                        </div>
+                        <div class="banner-item">
+                            <i class="fa-solid fa-print"></i>
+                            <span>Printing</span>
+                        </div>
+                        <div class="banner-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>College Forms</span>
+                        </div>
+                        <div class="banner-item">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Bill Payment</span>
+                        </div>
+                        <div class="banner-item">
+                            <i class="fa-solid fa-train"></i>
+                            <span>Train Ticket</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="filter-section container" id="services">
+        <div class="section-title fade-in">
+            <h2>Our Comprehensive Services</h2>
+            <p>Fast, secure, and hassle-free processing for all your official needs</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="serviceSearch" placeholder="🔍  Search service (e.g., Aadhaar, PAN, Print...)" aria-label="Search services">
+            <button class="btn btn-primary" style="padding: 10px 22px;" onclick="searchServices()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all" aria-label="Show all services">All Services</button>
+            <button class="filter-btn" data-filter="gov" aria-label="Government cards">Government Cards</button>
+            <button class="filter-btn" data-filter="cert" aria-label="Certificates">Certificates</button>
+            <button class="filter-btn" data-filter="forms" aria-label="Online forms">Online Forms</button>
+            <button class="filter-btn" data-filter="print" aria-label="Printing">Printing & Binding</button>
+            <button class="filter-btn" data-filter="utility" aria-label="Bills">Bills & Recharges</button>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+            <div class="service-card glass fade-in" data-category="gov">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-id-card"></i></div>
+                    <h3>Aadhaar Card Services</h3>
+                    <p>PVC Printing, address updates, mobile linking, and document uploads.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="gov">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-credit-card"></i></div>
+                    <h3>PAN Card</h3>
+                    <p>New application, corrections, and instant e-PAN generation.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="gov">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-check-to-slot"></i></div>
+                    <h3>Voter ID Card</h3>
+                    <p>New registration, correction, and downloading digital Voter ID.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="gov">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Ayushman Card</h3>
+                    <p>Apply for PMJAY health cards and family member verification.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="cert">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-file-lines"></i></div>
+                    <h3>Birth & Death Certificate</h3>
+                    <p>Registration assistance and online download facilities.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="cert">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                    <h3>Income / Caste / Domicile</h3>
+                    <p>Fast online application for all government-issued certificates.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="gov">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-passport"></i></div>
+                    <h3>Passport Services</h3>
+                    <p>New application submission and appointment scheduling.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="utility">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-train"></i></div>
+                    <h3>Railway Ticket Booking</h3>
+                    <p>IRCTC Train Ticket booking, status tracking, and cancellations.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="forms">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Govt & College Forms</h3>
+                    <p>Scholarship forms, college admission, and exam submissions.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="print">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-print"></i></div>
+                    <h3>Color & B/W Printing</h3>
+                    <p>High-quality printing, lamination, and spiral binding services.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="utility">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Bills & Recharges</h3>
+                    <p>Electricity bill payment, Fastag, Mobile, and DTH recharge.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="print">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-file-pen"></i></div>
+                    <h3>Resume & Scanning</h3>
+                    <p>Professional resume design, document scanning, and uploads.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="gov">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-hard-hat"></i></div>
+                    <h3>Labour Card</h3>
+                    <p>New registration and renewal of Shramik / Labour cards.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card glass fade-in" data-category="forms">
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>Job Application Forms</h3>
+                    <p>Government job form filling, admit card download, and result check.</p>
+                </div>
+                <a href="#apply" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- No results message -->
+        <div id="noResults" style="display:none; text-align:center; padding: 40px; color: var(--text-muted);">
+            <i class="fa-solid fa-search" style="font-size: 3rem; margin-bottom: 15px; opacity: 0.3;"></i>
+            <p>No service found. Try a different keyword.</p>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-section" style="margin-top: 60px;">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Why Choose Us?</h2>
+                <p>Thousands of satisfied customers trust us for their government service needs</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass fade-in">
+                    <div class="feature-icon-wrap">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4>100% Trusted</h4>
+                    <p>Secure document handling with complete privacy guaranteed</p>
+                </div>
+                <div class="feature-card glass fade-in">
+                    <div class="feature-icon-wrap">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h4>Fast Processing</h4>
+                    <p>Quick turnaround — most services done same day</p>
+                </div>
+                <div class="feature-card glass fade-in">
+                    <div class="feature-icon-wrap">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h4>Affordable Rates</h4>
+                    <p>Standard government fees — no hidden charges</p>
+                </div>
+                <div class="feature-card glass fade-in">
+                    <div class="feature-icon-wrap">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h4>Expert Support</h4>
+                    <p>Guided documentation by experienced professionals</p>
+                </div>
+                <div class="feature-card glass fade-in">
+                    <div class="feature-icon-wrap">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp Help</h4>
+                    <p>Send documents on WhatsApp & collect prints anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Form & Price List -->
+    <section class="apply-section container" id="apply">
+        <div class="section-title fade-in">
+            <h2>Apply Online & Price List</h2>
+            <p>Submit your request online — we'll contact you within minutes</p>
+        </div>
+        <div class="grid-2-col">
+
+            <!-- Online Form -->
+            <div class="form-container glass fade-in">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">
+                    <i class="fa-solid fa-file-circle-plus"></i> Online Service Request
+                </h3>
+                <form id="serviceForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span style="color:#ff5630">*</span></label>
+                        <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required aria-label="Full Name">
+                        <span class="error-msg" id="nameErr">Please enter your name.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number <span style="color:#ff5630">*</span></label>
+                        <input type="tel" id="mobile" class="form-control" placeholder="Enter 10-digit mobile number" maxlength="10" required aria-label="Mobile Number">
+                        <span class="error-msg" id="mobileErr">Please enter a valid 10-digit number.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Required <span style="color:#ff5630">*</span></label>
+                        <select id="service" class="form-control" required aria-label="Select Service">
+                            <option value="">— Select a Service —</option>
+                            <option>Aadhaar Card Service</option>
+                            <option>PAN Card Application</option>
+                            <option>Voter ID Card</option>
+                            <option>Ayushman Card</option>
+                            <option>Passport Service</option>
+                            <option>Income / Caste / Domicile Certificate</option>
+                            <option>Birth / Death Certificate</option>
+                            <option>Railway Ticket Booking</option>
+                            <option>Online Form Filling (College/Scholarship)</option>
+                            <option>Labour Card</option>
+                            <option>Printout / Lamination / Binding</option>
+                            <option>Bills & Recharges</option>
+                            <option>Other Services</option>
+                        </select>
+                        <span class="error-msg" id="serviceErr">Please select a service.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="docs">Upload Documents (Optional)</label>
+                        <input type="file" id="docs" class="form-control" accept=".jpg,.jpeg,.png,.pdf" aria-label="Upload Document">
+                        <small style="color: var(--text-muted); font-size: 0.78rem;">Accepted: JPG, PNG, PDF (Max 5MB)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Instructions / Message</label>
+                        <textarea id="message" class="form-control" rows="3" placeholder="Write your requirements here..." aria-label="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn whatsapp-submit">
+                        <i class="fa-brands fa-whatsapp"></i> Submit & Connect on WhatsApp
+                    </button>
+                    <p style="text-align:center; font-size:0.78rem; color:var(--text-muted); margin-top:10px;">
+                        We will confirm your request within minutes via WhatsApp.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Price List -->
+            <div class="price-container glass fade-in" id="prices">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">
+                    <i class="fa-solid fa-list-check"></i> Standard Service Rates
+                </h3>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Service Description</th>
+                            <th>Est. Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fa-solid fa-id-card" style="color:var(--primary); margin-right:8px;"></i>Aadhaar PVC Card Print</td>
+                            <td><span class="price-badge">₹50 - ₹100</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-credit-card" style="color:var(--primary); margin-right:8px;"></i>New PAN Card Application</td>
+                            <td><span class="price-badge">₹150 - ₹250</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-print" style="color:var(--primary); margin-right:8px;"></i>Black & White Print (per page)</td>
+                            <td><span class="price-badge">₹2 - ₹5</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-palette" style="color:var(--primary); margin-right:8px;"></i>Color Printout (per page)</td>
+                            <td><span class="price-badge">₹10 - ₹20</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-file-invoice" style="color:var(--primary); margin-right:8px;"></i>Income / Caste Certificate</td>
+                            <td><span class="price-badge">₹100 - ₹150</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-book" style="color:var(--primary); margin-right:8px;"></i>Spiral Binding</td>
+                            <td><span class="price-badge">₹30 - ₹60</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-train" style="color:var(--primary); margin-right:8px;"></i>Railway Ticket Booking</td>
+                            <td><span class="price-badge">₹30 - ₹50</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-heart-pulse" style="color:var(--primary); margin-right:8px;"></i>Ayushman Card</td>
+                            <td><span class="price-badge">₹50 - ₹100</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-hard-hat" style="color:var(--primary); margin-right:8px;"></i>Labour Card Registration</td>
+                            <td><span class="price-badge">₹100 - ₹150</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-passport" style="color:var(--primary); margin-right:8px;"></i>Passport Form Filling</td>
+                            <td><span class="price-badge">₹200 - ₹300</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="background: rgba(255,171,0,0.1); border: 1px solid rgba(255,171,0,0.3); border-radius: 10px; padding: 12px 16px; margin-top: 15px;">
+                    <p style="font-size: 0.82rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-triangle-exclamation" style="color: var(--accent);"></i>
+                        <strong style="color: var(--text-main);"> Note:</strong> Government fees and taxes are extra if applicable. Prices may vary based on service complexity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section container" id="reviews">
+        <div class="section-title fade-in">
+            <h2>Customer Reviews</h2>
+            <p>Real feedback from our valued customers</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card glass fade-in">
+                <i class="fa-solid fa-quote-right quote-icon"></i>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Bahut acchi service mili! PAN card correction bahut jaldi ho gaya bina kisi takleef ke."</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">A</div>
+                    <div>
+                        <div class="reviewer-name">Anil Sharma</div>
+                        <div class="reviewer-type">Local Customer, Gwalior</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass fade-in">
+                <i class="fa-solid fa-quote-right quote-icon"></i>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"College admission form filling mein bahut madad ki. Staff bahut helpful aur patient hai."</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">P</div>
+                    <div>
+                        <div class="reviewer-name">Priya Verma</div>
+                        <div class="reviewer-type">Student Customer</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass fade-in">
+                <i class="fa-solid fa-quote-right quote-icon"></i>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Printing quality ekdum top-notch hai! Lamination bhi bahut sahi aati hai yahan se."</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">R</div>
+                    <div>
+                        <div class="reviewer-name">Rahul Gupta</div>
+                        <div class="reviewer-type">Business Client</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass fade-in">
+                <i class="fa-solid fa-quote-right quote-icon"></i>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>"Ayushman card banaane mein bahut help ki. Gwalior mein sabse best MP Online center hai."</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">S</div>
+                    <div>
+                        <div class="reviewer-name">Sunita Devi</div>
+                        <div class="reviewer-type">Regular Customer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section container" id="gallery">
+        <div class="section-title fade-in">
+            <h2>Center Preview</h2>
+            <p>Modern infrastructure ready to serve all your digital needs</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item glass fade-in" onclick="showToast('🖥️ Computer setup for fast service processing!', 'info')">
+                <i class="fa-solid fa-desktop"></i>
+                <span>Computer Setup</span>
+            </div>
+            <div class="gallery-item glass fade-in" onclick="showToast('🖨️ High-speed printer for all your documents!', 'info')">
+                <i class="fa-solid fa-print"></i>
+                <span>High-Speed Printer</span>
+            </div>
+            <div class="gallery-item glass fade-in" onclick="showToast('✏️ Full stationery shop with all items!', 'info')">
+                <i class="fa-solid fa-pen-ruler"></i>
+                <span>Stationery Corner</span>
+            </div>
+            <div class="gallery-item glass fade-in" onclick="showToast('👥 Dedicated customer service desk!', 'info')">
+                <i class="fa-solid fa-users"></i>
+                <span>Customer Desk</span>
+            </div>
+            <div class="gallery-item glass fade-in" onclick="showToast('📄 Document scanning & digitization!', 'info')">
+                <i class="fa-solid fa-scanner"></i>
+                <span>Document Scanner</span>
+            </div>
+            <div class="gallery-item glass fade-in" onclick="showToast('🔒 Secure & private service environment!', 'info')">
+                <i class="fa-solid fa-lock"></i>
+                <span>Secure Processing</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section container">
+        <div class="section-title fade-in">
+            <h2>Frequently Asked Questions</h2>
+            <p>Got a question? We've got the answer!</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="faq-item glass fade-in">
+                <div class="faq-question" role="button" aria-expanded="false">
+                    PAN Card ke liye kya documents chahiye?
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">Aadhaar card aur ek active mobile number (OTP ke liye) ki zarurat hoti hai. Kuch cases mein photo bhi lagti hai. Humare paas aao — hum complete guide karenge.</div>
+            </div>
+
+            <div class="faq-item glass fade-in">
+                <div class="faq-question" role="button" aria-expanded="false">
+                    Income Certificate kitne din mein milta hai?
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">Generally 3 se 7 working days lagte hain, jo official department ke approval par depend karta hai. Online application hum turant kar dete hain.</div>
+            </div>
+
+            <div class="faq-item glass fade-in">
+                <div class="faq-question" role="button" aria-expanded="false">
+                    Kya printing ke liye documents WhatsApp par bhej sakte hain?
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">Haan! Aap apne documents seedha +91 9039640694 par WhatsApp kar sakte hain aur print kabhi bhi collect kar sakte hain. Very convenient!</div>
+            </div>
+
+            <div class="faq-item glass fade-in">
+                <div class="faq-question" role="button" aria-expanded="false">
+                    Aadhaar card mein address update kaise hoga?
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">Aapko address proof (Bijli Bill / Rent Agreement) aur Aadhaar card leke aana hoga. Hum online update request submit karenge. Process 30 min ka hai.</div>
+            </div>
+
+            <div class="faq-item glass fade-in">
+                <div class="faq-question" role="button" aria-expanded="false">
+                    Shop ka timing kya hai?
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">Hum Monday se Saturday — Subah 9:00 baje se Sham 8:00 baje tak open rehte hain. Sunday special cases mein available hain. WhatsApp par contact karo!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section container" id="contact">
+        <div class="section-title fade-in">
+            <h2>Contact Us</h2>
+            <p>Visit our outlet or reach out directly — we're always here to help!</p>
+        </div>
+        <div class="contact-grid">
+            <div>
+                <div class="contact-card glass fade-in">
+                    <div class="contact-icon"><i class="fa-solid fa-user-gear"></i></div>
+                    <div>
+                        <strong>Owner / Operator</strong>
+                        <p>Ravi Batham</p>
+                    </div>
+                </div>
+
+                <div class="contact-card glass fade-in">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <strong>Phone / Call Now</strong>
+                        <p><a href="tel:+919039640694">+91 90396 40694</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-card glass fade-in">
+                    <div class="contact-icon" style="background: linear-gradient(135deg, #25d366, #128C7E);">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <strong>WhatsApp Direct</strong>
+                        <p><a href="https://wa.me/919039640694" target="_blank">+91 90396 40694</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-card glass fade-in">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <strong>Location</strong>
+                        <p>Gwalior, Madhya Pradesh — 474001</p>
+                    </div>
+                </div>
+
+                <!-- Business Hours -->
+                <div class="business-hours glass fade-in">
+                    <h4 style="margin-bottom: 10px; color: var(--primary); font-size: 0.95rem;">
+                        <i class="fa-solid fa-clock"></i> Business Hours
+                    </h4>
+                    <div class="hours-row">
+                        <span>Monday – Friday</span>
+                        <span class="open-badge">9:00 AM – 8:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Saturday</span>
+                        <span class="open-badge">9:00 AM – 6:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Sunday</span>
+                        <span class="closed-badge">Closed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="glass fade-in" style="padding: 10px; min-height: 400px;">
+                <iframe
+                    class="map-frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114510.87321557007!2d78.10098020619857!3d26.21367098606085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c5d1792d35e1%3A0xd515a45d661195a3!2sGwalior%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Batham MP Online Location - Gwalior, MP">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 15px;">
+                    <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div>
+                        <div>Batham MP Online</div>
+                        <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 400;">& Stationery Center</div>
+                    </div>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.8;">
+                    Your one-stop destination for digital form submissions, government documentation, utility bill management, high-grade printing, and complete stationery products in Gwalior, MP.
+                </p>
+                <div class="social-links">
+                    <a href="https://wa.me/919039640694" class="social-btn" title="WhatsApp" target="_blank" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:+919039640694" class="social-btn" title="Call Us" aria-label="Call">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="#contact" class="social-btn" title="Location" aria-label="Location">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> All Services</a></li>
+                    <li><a href="#apply"><i class="fa-solid fa-chevron-right"></i> Apply Online</a></li>
+                    <li><a href="#prices"><i class="fa-solid fa-chevron-right"></i> Price List</a></li>
+                    <li><a href="#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#apply"><i class="fa-solid fa-chevron-right"></i> Aadhaar Card</a></li>
+                    <li><a href="#apply"><i class="fa-solid fa-chevron-right"></i> PAN Card</a></li>
+                    <li><a href="#apply"><i class="fa-solid fa-chevron-right"></i> Certificates</a></li>
+                    <li><a href="#apply"><i class="fa-solid fa-chevron-right"></i> Printing Services</a></li>
+                    <li><a href="#apply"><i class="fa-solid fa-chevron-right"></i> Bill Payments</a></li>
+                    <li><a href="#apply"><i class="fa-solid fa-chevron-right"></i> Railway Tickets</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>
+                &copy; <span id="year"></span> Batham MP Online & Stationery. All Rights Reserved. |
+                Designed with <i class="fa-solid fa-heart" style="color:#ff5630;"></i> in Gwalior, MP
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919039640694?text=Hello%20Ravi%20Batham,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+       class="floating-whatsapp"
+       target="_blank"
+       title="Chat on WhatsApp"
+       aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg">Message here</span>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT
+    ========================================== -->
+    <script>
+        // ---- PAGE LOADER ----
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loaderOverlay').classList.add('hidden');
+            }, 1600);
+        });
+
+        // ---- DYNAMIC COPYRIGHT YEAR ----
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ---- THEME TOGGLE ----
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeIcon.className = savedTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+
+        themeToggleBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            themeIcon.className = next === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        });
+
+        // ---- MOBILE MENU ----
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.className = navLinks.classList.contains('active') ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        });
+
+        function toggleMenu() {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
+            }
+        }
+
+        // ---- SERVICE SEARCH ----
+        const searchInput = document.getElementById('serviceSearch');
+        const serviceCards = document.querySelectorAll('.service-card');
+        const noResults = document.getElementById('noResults');
+
+        function searchServices() {
+            const filterText = searchInput.value.toLowerCase().trim();
+            let found = 0;
+            serviceCards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const desc = card.querySelector('p').innerText.toLowerCase();
+                if (title.includes(filterText) || desc.includes(filterText)) {
+                    card.style.display = 'flex';
+                    found++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            noResults.style.display = found === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('keyup', searchServices);
+
+        // ---- CATEGORY FILTER ----
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                searchInput.value = '';
+                const filter = btn.getAttribute('data-filter');
+                let found = 0;
+                serviceCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                        found++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                noResults.style.display = found === 0 ? 'block' : 'none';
+            });
+        });
+
+        // ---- FAQ ACCORDION ----
+        const faqs = document.querySelectorAll('.faq-item');
+        faqs.forEach(faq => {
+            faq.querySelector('.faq-question').addEventListener('click', () => {
+                const isActive = faq.classList.contains('active');
+                faqs.forEach(f => {
+                    f.classList.remove('active');
+                    f.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                if (!isActive) {
+                    faq.classList.add('active');
+                    faq.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // ---- SCROLL TO TOP ----
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ---- SCROLL FADE-IN ANIMATION ----
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeEls.forEach(el => observer.observe(el));
+
+        // ---- TOAST NOTIFICATION ----
+        function showToast(msg, type = 'info') {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = msg;
+            toast.className = 'toast show ' + (type === 'success' ? 'success' : '');
+            setTimeout(() => toast.classList.remove('show'), 3500);
+        }
+
+        // ---- COUNTER ANIMATION ----
+        function animateCounter(id, target, suffix = '+') {
+            const el = document.getElementById(id);
+            let current = 0;
+            const step = Math.ceil(target / 60);
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                el.textContent = current + suffix;
+            }, 30);
+        }
+
+        const counterStarted = false;
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    entry.target.dataset.animated = 'true';
+                    animateCounter('counter1', 5000);
+                    animateCounter('counter2', 14);
+                    animateCounter('counter3', 5);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const heroSection = document.querySelector('.hero-stats');
+        if (heroSection) heroObserver.observe(heroSection);
+
+        // ---- FORM VALIDATION & SUBMIT ----
+        document.getElementById('serviceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('fullName');
+            const mobile = document.getElementById('mobile');
+            const service = document.getElementById('service');
+            const message = document.getElementById('message');
+            const nameErr = document.getElementById('nameErr');
+            const mobileErr = document.getElementById('mobileErr');
+            const serviceErr = document.getElementById('serviceErr');
+
+            let valid = true;
+
+            // Reset errors
+            [name, mobile, service].forEach(f => f.classList.remove('error'));
+            [nameErr, mobileErr, serviceErr].forEach(e => e.style.display = 'none');
+
+            // Validate name
+            if (name.value.trim().length < 2) {
+                name.classList.add('error');
+                nameErr.style.display = 'block';
+                valid = false;
+            }
+
+            // Validate mobile (10 digits)
+            if (!/^[6-9]\d{9}$/.test(mobile.value.trim())) {
+                mobile.classList.add('error');
+                mobileErr.style.display = 'block';
+                valid = false;
+            }
+
+            // Validate service selection
+            if (!service.value) {
+                service.classList.add('error');
+                serviceErr.style.display = 'block';
+                valid = false;
+            }
+
+            if (!valid) {
+                showToast('⚠️ Please fill all required fields correctly.');
+                return;
+            }
+
+            // Build WhatsApp message
+            const waMsg = `Hello Ravi Batham! 🙏%0A%0A*New Service Request*%0A------------------------%0A*Name:* ${encodeURIComponent(name.value.trim())}%0A*Mobile:* ${mobile.value.trim()}%0A*Service:* ${encodeURIComponent(service.value)}%0A*Message:* ${encodeURIComponent(message.value.trim() || 'N/A')}%0A------------------------%0APlease confirm my request. Thank you!`;
+
+            showToast('✅ Request submitted! Opening WhatsApp...', 'success');
+
+            setTimeout(() => {
+                window.open(`https://wa.me/919039640694?text=${waMsg}`, '_blank');
+                this.reset();
+            }, 1000);
+        });
+
+        // ---- MOBILE NUMBER: Numbers Only ----
+        document.getElementById('mobile').addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    </script>
+</body>
+</html>
